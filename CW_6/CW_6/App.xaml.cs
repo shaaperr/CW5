@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace CW5
+namespace CW_6
 {
     /// <summary>
     /// Interaction logic for App.xaml
