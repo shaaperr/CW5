@@ -41,25 +41,41 @@ namespace CW_6
             
             while (read.Read())
             {
-                data += read[0].ToString() + "\n";
-
+                for(int i = 0; i < read.FieldCount; i++)
+                {
+                    data += read[i].ToString() + " ";
+                }
+                
+                data += "\n";
             }
+            tbox.Text = data;
+            cn.Close();
+        }
+
+        private void employees_Click(object sender, RoutedEventArgs e)
+        {
+            string query = "select* from Employees";
+
+            OleDbCommand cmd = new OleDbCommand(query, cn);
+            cn.Open();
+            OleDbDataReader read = cmd.ExecuteReader();
+            string data = "";
+
+            while (read.Read())
+            {
+                for (int i = 0; i < read.FieldCount; i++)
+                {
+                    data += read[i].ToString() + " ";
+                }
+
+                data += "\n";
+            }
+            tbox.Text = data;
+            cn.Close();
         }
 
         private void tbox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            string query = "select* from Assets";
-            OleDbCommand cmd = new OleDbCommand(query, cn);
-            cn.Open();
-            OleDbDataReader read = cmd.ExecuteReader();
-            if (read.Read())
-            {
-                tbox.Text = read.GetValue(0).ToString();
-
-            }
-            cn.Close();
-
-
 
         }
     }

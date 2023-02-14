@@ -4,7 +4,7 @@
 winexe
 C#
 .cs
-C:\Users\kirap\Desktop\cw6\CW_6\CW_6\obj\Debug\
+C:\Users\kirap\Desktop\cw6\CW_6\CW_6\obj\x64\Debug\
 CW_6
 none
 false
@@ -12,9 +12,9 @@ DEBUG;TRACE
 C:\Users\kirap\Desktop\cw6\CW_6\CW_6\App.xaml
 1219584333
 1-1919477865
-61947518782
+7460406034
 13-1310406943
 MainWindow.xaml;
 
-False
+True
 
